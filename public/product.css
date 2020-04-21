@@ -1,4 +1,3 @@
-
 .riquadroProdotto{
   width: 400px;
   background: #ecedef;
@@ -89,12 +88,13 @@
 @media screen and (max-width:700px) {
 
   .riquadroProdotto{
+  	
     width: 200px;
     background: #ecedef;
     padding: 40px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%,-50%);
     text-transform: uppercase;
   }
