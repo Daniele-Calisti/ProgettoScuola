@@ -5,4 +5,4 @@ CREATE TABLE `progettoweb`.`credenziali` ( `id` INT NULL AUTO_INCREMENT ,
                                             `verificato` TINYINT(1) NULL COMMENT 'assume valore 1 o 0' , 
                                             `token` VARCHAR(255) NULL , 
                                             PRIMARY KEY (`id`)) ENGINE = InnoDB;
-                                          )
+                                          
