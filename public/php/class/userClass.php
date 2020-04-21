@@ -236,7 +236,7 @@
 					';
 			//SETTO GLI HEADER CHE SERVONO PER INVIARE L'EMAIL
 			$headers = array(
-			'Authorization: Bearer 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',
+			'Authorization: keyCodeSendgrid',
 			'Content-Type: application/json'
 			);
 
