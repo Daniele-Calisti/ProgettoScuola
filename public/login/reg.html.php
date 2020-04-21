@@ -45,7 +45,7 @@
       <input type="text" name="email" placeholder="Email" >
       <input type="text" name="user" placeholder="Username">
       <input type="password" name="psw" placeholder="Password">
-      <input type="submit" name="reg" value="Login">
+      <input type="submit" name="reg" value="Registrati">
         <p>
           Sei già registrato? <a href="/login">Clicca qui</a>
         </p>
