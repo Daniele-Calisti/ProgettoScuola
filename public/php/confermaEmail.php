@@ -10,7 +10,7 @@
 		//Passo come parametri l'email e il token preso dal'url
 		$esito = $userFunc->verificaAccount($_GET['email'],$_GET['token']);
 		
-		if($esito)
+	if($esito)
         {
         	$user = $userFunc->getUser();	
         	$_SESSION['user'] = $user;
