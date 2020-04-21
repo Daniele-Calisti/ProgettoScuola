@@ -1,0 +1,170 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Open Sans",sans-serif;
+}
+
+header{
+  height: 90px;
+  background: #2f3640;
+}
+
+
+.inner-width{
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: auto;
+}
+
+.menuNavigazione{
+  float: right;
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+}
+
+.menuNavigazione a{
+  margin-left: 10px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: .3s linear;
+}
+
+.menuNavigazione a:hover{
+  background: #fff;
+  color: #2f3640;
+  transform: scale(1.1);
+}
+
+.menuNavigazione i{
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.home{
+  color: #ff6b6b;
+}
+
+.about{
+  color: #0abde3;
+}
+
+.works{
+  color: #feca57;
+}
+
+.login{
+  color: #5f27cd;
+}
+
+.contatto{
+  color: #1dd1a1;
+}
+
+.menuTendinaBottoni{
+  float: right;
+  height: 90px;
+  line-height: 90px !important;
+  color: #fff;
+  font-size: 26px;
+  display: none !important;
+  cursor: pointer;
+}
+
+
+
+.errore {
+  background-color: red; 
+  width: 50%;
+  text-align: center;
+  margin-top: 20px;
+  left: 50%;
+  padding: 20px;
+  background-color: red; 
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  border-radius: 24px;
+}
+
+.successo {
+  width: 50%;
+  text-align: center;
+  margin-top: 20px;
+  left: 50%;
+  padding: 20px;
+  background-color: #00d619; 
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  border-radius: 24px;
+}
+
+.successo p, .errore p{
+  padding: 5px;
+}
+
+.btnChiusura {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnChiusura:hover {
+  color: black;
+}
+
+
+@media screen and (max-width:700px) {
+  .menuTendinaBottoni{
+    display: block !important;
+  }
+
+  .menuNavigazione{
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    background: #172b4d;
+    top: 90px;
+    right: 0;
+    display: none;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+
+  .menuNavigazione::before{
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #172b4d;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+
+  .menuNavigazione a:hover{
+  background: #fff;
+  color: #2f3640;
+  transform: scale(1.1);
+  }
+
+  .menuNavigazione a{
+    display: block;
+    margin: 10px 0;
+  }
+
+  .menuNavigazione.active{
+    display: block;
+  }
+
+}
