@@ -1,5 +1,6 @@
 <?php
-
+	
+    session_start();
 	//classe che contiene le funzioni di login e registrazione al sito e le funzioni di verifica dell'account dopo la registrazione
 	class userClass
 	{
@@ -24,7 +25,33 @@
 			if(isset($email))							$this->email = $email;				
 
 		}
+		
+        /*
+			function getUser()
 
+			Variabile utilizzate: $pdo, $nomeTabella, $email
+
+			Ritorna l'utente associato all'email
+		*/
+        public function getUser()
+        {
+        	//Query da eseguire per selezionare l'utente 
+        	$sql = "SELECT utente FROM ".$this->nomeTabella." WHERE email = :email";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindValue(':email',$this->email);
+            $stmt->execute();
+            
+            //Variabile che contiene l'utente associato all'email
+            $result = $stmt->fetchAll();
+            
+            //Estraggo dalla variabile, il campo della colonna utente
+            foreach($result as $row)
+            {
+            	$user = $row['utente'];
+            }
+        	
+            return $user;
+        }
 		/*
 			function verificaUtente()
 
@@ -32,7 +59,7 @@
 
 			Ritorna true se l'utente esiste nel db altrimenti false
 		*/
-
+		
 		public function verificaUtente()
 		{
 			$autenticato = false;		//Variabile per controllare che l'utente sia stato trovato
@@ -200,7 +227,7 @@
 
 						<div class="container" style="margin: black 1px solid">
 
-							<a href="localhost/confermaEmail/'.$token.'/'.$this->email.'" target="_blank">Confirm your email</a>
+							<a href="www.progettooop.altervista.org/confermaEmail/'.$token.'/'.$this->email.'" target="_blank">Confirm your email</a>
 
 						</div>
 
@@ -291,8 +318,5 @@
 
 
 	}
-
-
-
 
 ?>
