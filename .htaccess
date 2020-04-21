@@ -1,0 +1,14 @@
+RewriteEngine On 
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^homepage?$  								public/homepage.html.php
+RewriteRule ^homepage/([^/]+)+$  					public/homepage.html.php?happen=$1
+RewriteRule ^login?$  									public/login/login.html.php
+RewriteRule ^login/([^/]+)+$  							public/login/login.html.php?happen=$1
+RewriteRule ^loadingLogin?$  							public/php/login.php
+RewriteRule ^register?$  								public/login/reg.html.php
+RewriteRule ^register/([^/]+)+$  						public/login/reg.html.php?happen=$1
+RewriteRule ^confermaEmail/([^/]+)+/([^/]+)+$ 		public/php/confermaEmail.php?token=$1&email=$2	[L]
+RewriteRule ^logout?$  									public//php/logout.php
